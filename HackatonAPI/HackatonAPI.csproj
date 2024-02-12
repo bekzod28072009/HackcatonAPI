@@ -18,10 +18,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Hackaton.DataAcces\Hackaton.DataAcces.csproj" />
     <ProjectReference Include="..\Hackaton.Service\Hackaton.Service.csproj" />
   </ItemGroup>
