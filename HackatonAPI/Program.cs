@@ -1,4 +1,6 @@
 
+using HackatonAPI.Extension;
+
 namespace HackatonAPI
 {
     public class Program
@@ -11,6 +13,15 @@ namespace HackatonAPI
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
+            // Middleware settings
+            builder.Services.AddDBConTextes(builder.Configuration);
+            builder.Services.AddRepository();
+
+
+
+
+
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
