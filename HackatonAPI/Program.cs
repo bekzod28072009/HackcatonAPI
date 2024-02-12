@@ -17,6 +17,8 @@ namespace HackatonAPI
             // Middleware settings
             builder.Services.AddDBConTextes(builder.Configuration);
             builder.Services.AddRepository();
+            builder.Services.AddService();
+            builder.Services.AddAutoMapper(typeof(Program));
 
 
 
