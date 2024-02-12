@@ -4,6 +4,8 @@ using Hackaton.DataAcces.Repository;
 using Hackaton.Domain.Entity.Foods;
 using Hackaton.Domain.Entity.Orders;
 using Hackaton.Domain.Entity.Tables;
+using Hackaton.Service.IService;
+using Hackaton.Service.Service;
 using Microsoft.EntityFrameworkCore;
 
 namespace HackatonAPI.Extension
@@ -22,6 +24,14 @@ namespace HackatonAPI.Extension
             services.AddTransient<IGenericRepository<Order>, GenericRepository<Order>>();
             services.AddTransient<IGenericRepository<OrderInFood>, GenericRepository<OrderInFood>>();
             services.AddTransient<IGenericRepository<Table>, GenericRepository<Table>>();
+        }
+
+        public static void AddService(this IServiceCollection services)
+        {
+            services.AddTransient<IFoodService, FoodService>();
+            services.AddTransient<IOrderInFoodService, OrderInFoodService>();
+            services.AddTransient<IOrderService, OrderService>();
+            services.AddTransient<ITableService, TableService>();
         }
     }
 }
