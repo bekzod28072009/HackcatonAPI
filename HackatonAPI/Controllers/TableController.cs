@@ -42,4 +42,3 @@ namespace HackatonAPI.Controllers
             => Ok(await service.DeleteAsync(p => p.Id == id));
     }
 }
-}
