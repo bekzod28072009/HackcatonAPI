@@ -6,7 +6,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Hackaton.DataAcces.Migrations
 {
     /// <inheritdoc />
-    public partial class project : Migration
+    public partial class Hackaton : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -21,7 +21,7 @@ namespace Hackaton.DataAcces.Migrations
                     Info = table.Column<string>(type: "text", nullable: false),
                     Prise = table.Column<int>(type: "integer", nullable: false),
                     Mails = table.Column<int>(type: "integer", nullable: false),
-                    MyProperty = table.Column<string>(type: "text", nullable: false)
+                    IsCreated = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -35,7 +35,7 @@ namespace Hackaton.DataAcces.Migrations
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Prise = table.Column<int>(type: "integer", nullable: false),
-                    MyProperty = table.Column<string>(type: "text", nullable: false)
+                    IsCreated = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -52,7 +52,7 @@ namespace Hackaton.DataAcces.Migrations
                     Amount = table.Column<int>(type: "integer", nullable: false),
                     Prise = table.Column<int>(type: "integer", nullable: false),
                     OrderId = table.Column<int>(type: "integer", nullable: true),
-                    MyProperty = table.Column<string>(type: "text", nullable: false)
+                    IsCreated = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -78,7 +78,7 @@ namespace Hackaton.DataAcces.Migrations
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Info = table.Column<string>(type: "text", nullable: false),
                     OrderId = table.Column<int>(type: "integer", nullable: true),
-                    MyProperty = table.Column<string>(type: "text", nullable: false)
+                    IsCreated = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {

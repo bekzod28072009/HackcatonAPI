@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Hackaton.DataAcces.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240212151230_project")]
-    partial class project
+    [Migration("20240213143948_Hackaton")]
+    partial class Hackaton
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -37,12 +37,12 @@ namespace Hackaton.DataAcces.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("Mails")
-                        .HasColumnType("integer");
-
-                    b.Property<string>("MyProperty")
+                    b.Property<string>("IsCreated")
                         .IsRequired()
                         .HasColumnType("text");
+
+                    b.Property<int>("Mails")
+                        .HasColumnType("integer");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -64,7 +64,7 @@ namespace Hackaton.DataAcces.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("MyProperty")
+                    b.Property<string>("IsCreated")
                         .IsRequired()
                         .HasColumnType("text");
 
@@ -90,7 +90,7 @@ namespace Hackaton.DataAcces.Migrations
                     b.Property<int>("FoodsId")
                         .HasColumnType("integer");
 
-                    b.Property<string>("MyProperty")
+                    b.Property<string>("IsCreated")
                         .IsRequired()
                         .HasColumnType("text");
 
@@ -121,7 +121,7 @@ namespace Hackaton.DataAcces.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("MyProperty")
+                    b.Property<string>("IsCreated")
                         .IsRequired()
                         .HasColumnType("text");
 
